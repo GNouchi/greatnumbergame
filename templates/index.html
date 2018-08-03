@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+    .container{
+        background: lightgrey;
+        text-align: center;
+        font: Bookman ;
+        margin:5px;
+        border: 5px solid black;
+    }
+    h4{
+    margin:0px;
+    padding: 15px; 
+    }
+    form{
+        vertical-align: center;
+        /* margin: 0px, 50px, 0px ,50px; */
+        display: inline-block;
+    }
+    button{
+        vertical-align: center;
+    }
+    .cont2{
+        background: {{clr}}
+    }
+    .text{
+        padding-top: 25px;
+        color:gainsboro;
+    }
+    .submit{
+        {{sub}}
+    }
+    .reset{
+        {{rst}}
+    }
+   </style>
+</head>
+  <body>
+    <div class="container s12">
+        <h4>GUESSING NUMBERS
+        </h4>
+        <p>Guess a number between 1 and 100!</p>
+       <div class = "cont2 s12">
+           {{num|safe}}
+           <div class = "buttonz">
+           <form action="submitted" method="post" class = "submit">
+               <input type="text" name = 'guess' >
+                <button class="btn waves-effect waves-light" type="submit">Submit
+                </button>                            
+            </form>
+            <form action="reset" method="post" class="reset" >
+                <button class="btn waves-effect waves-light" type="submit">Reset
+                </button>                            
+            </form>
+            </div>
+            <br>
+        </div > 
+    </div>
+  </body>
+</html>
+      
